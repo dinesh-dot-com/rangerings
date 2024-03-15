@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Range Rings Calculator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD6Q7tyd4ilu5OhqX_aRN5sVK14YGus5cA"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <div class="form-group">
+                <label for="airportSelect">Select Airport:</label>
+                <select id="airportSelect" class="form-control">
+                    <option value="">Select Airport</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="aircraftMake">Aircraft Make:</label>
+                <select id="aircraftMake" class="form-control">
+                    <option value="">Select Manufacturer</option>
+                    <option value="Beechcraft">Beechcraft</option>
+                    <option value="Textron">Textron</option>
+                    <option value="Bombardier">Bombardier</option>
+                    <option value="Cessna">Cessna</option>
+                    <option value="Cessna_And_Textron">Cessna & Textron</option>
+                    <option value="Hindustan_Aeronautics_Limited">Hindustan Aeronautics Limited</option>
+                    <option value="Dassault_Aviation">Dassault Aviation</option>
+                    <option value="de_Havilland_Canada_Viking_Air &amp; Viking Air">de Havilland Canada & Viking Air</option>
+                    <option value="Embraer">Embraer</option>
+                    <option value="Gulfstream">Gulfstream</option>
+                    <option value="Piaggio Aero">Piaggio Aero</option>
+                    <option value="Pilatus">Pilatus</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="aircraftModel" class="d-flex align-items-center">Aircraft Model:
+                    <span class="ml-2 text-danger">
+                        <i class="fas fa-circle" style="font-size: 14px;"></i>
+                    </span>
+                </label>
+                <select id="aircraftModel" class="form-control">
+                    <option value="">Select Model</option>
+                    <!-- Options will be dynamically populated -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="aircraftModel2" class="d-flex align-items-center">Aircraft Model:
+                    <span class="ml-2 text-primary">
+                        <i class="fas fa-circle" style="font-size: 14px;"></i>
+                    </span>
+                </label>
+                <select id="aircraftModel2" class="form-control">
+                    <option value="">Select Model</option>
+                    <!-- Options will be dynamically populated -->
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="aircraftModel3" class="d-flex align-items-center">Aircraft Model:
+                    <span class="ml-2 text-success">
+                        <i class="fas fa-circle" style="font-size: 14px;"></i>
+                    </span>
+                </label>
+                <select id="aircraftModel3" class="form-control">
+                    <option value="">Select Model</option>
+                    <!-- Options will be dynamically populated -->
+                </select>
+            </div>
+            
+            <button onclick="updateMap()" class="btn btn-primary"><i class="fas fa-map-marker-alt"></i> Update Map</button>
+            <button onclick="undo()" class="btn btn-warning"><i class="fas fa-undo"></i> Undo</button>
+            <button onclick="reset()" class="btn btn-danger"><i class="fas fa-sync-alt"></i> Reset</button>
+            <button onclick="printMap()" class="btn btn-secondary"><i class="fas fa-print"></i> Print Map</button>
+
+        </div>
+        <div class="right">
+        
+            <div id="map"> </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

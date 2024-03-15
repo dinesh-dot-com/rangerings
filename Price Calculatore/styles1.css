@@ -1,0 +1,56 @@
+body {
+    padding-top: 20px;
+}
+
+#map {
+    height: 80vh;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+/* Custom styling for the Cost Details section */
+
+.row {
+    margin-top: 20px;
+}
+
+h2 {
+    color: #000000; /* Bootstrap primary color */
+}
+
+#tableContainer {
+    margin-top: 20px;
+    border: 1px solid #dee2e6; /* Bootstrap table border color */
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.table {
+    width: 100%;
+    margin-bottom: 0; /* Remove default bottom margin for Bootstrap tables */
+}
+
+.table th,
+.table td {
+    padding: 12px;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6; /* Bootstrap table border color */
+}
+
+.table th {
+    background-color: #f8f9fa; /* Bootstrap table header background color */
+}
+
+/* Optional: Add hover effect to table rows */
+.table tbody tr:hover {
+    background-color: #f0f8ff; /* Light blue color for hover effect */
+}
+
+
+.btn-success {
+    color: #fff;
+    background-color: #28a745;
+    border-color: #28a745;
+    margin-left: 10px;
+}
